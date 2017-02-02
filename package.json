@@ -4,7 +4,9 @@
   "description": "a queue consumer",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "tap test/*.js",
+    "lint": "eslint lib",
+    "lint-fix": "eslint --fix lib"
   },
   "repository": {
     "type": "git",
@@ -20,5 +22,15 @@
   "bugs": {
     "url": "https://github.com/razoroccam/node-queue-consumer/issues"
   },
-  "homepage": "https://github.com/razoroccam/node-queue-consumer#readme"
+  "homepage": "https://github.com/razoroccam/node-queue-consumer#readme",
+  "dependencies": {
+    "aws-sdk": "^2.9.0"
+  },
+  "devDependencies": {
+    "eslint": "^3.14.1",
+    "eslint-config-standard": "^6.2.1",
+    "eslint-plugin-promise": "^3.4.0",
+    "eslint-plugin-standard": "^2.0.1",
+    "tap": "^10.0.0"
+  }
 }
